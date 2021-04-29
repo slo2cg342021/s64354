@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>NWD - algorytm</title>
+	
+	<meta name="description" content="Największy wspólny dzielnik" />
+	<meta name="keywords" content="algorytm, nwd, programowanie" />
+
+	
+	<style>
+body{
+	padding-left:100px;
+	padding-right: 100px;
+	font-family: arial;
+    background-color: red;
+    color: blue;
+	}
+
+	</style>
+	
+<script>
+	function f1()
+	{
+		var a = document.getElementById("a").value;
+		var b = document.getElementById("b").value;
+		while (a != b){
+            if (a > b)
+                a -= b;
+            else
+                b -= a;
+        }
+		
+		document.getElementById("wynik").innerHTML = a;
+		
+	}
+
+</script>
+	
+</head>
+
+<body>
+<h1>Znajdź największy wspólny dzielnik liczb a i b </h1>
+
+
+<center>
+<h2>Schemat blokowy</h2>
+<img src = "KAMPIE.jpg">
+</center>
+<h2>Kod cpp</h2>
+
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">NWD</span> (<span style="color: #333399; font-weight: bold">int</span> a, <span style="color: #333399; font-weight: bold">int</span> b)
+    {
+        <span style="color: #008800; font-weight: bold">while</span> (a<span style="color: #333333">!=</span>b)
+        {
+         <span style="color: #008800; font-weight: bold">if</span> (a<span style="color: #333333">></span>b) a<span style="color: #333333">-=</span>b;
+         <span style="color: #008800; font-weight: bold">else</span> b<span style="color: #333333">-=</span>a;
+        }
+        <span style="color: #008800; font-weight: bold">return</span> a;
+    }
+    </pre></td></tr></table></div>
+
+<h2>Kod python</h2>   
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">
+    1
+    2
+    3
+    4
+    5
+    6
+    7</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">nwd</span>(a, b):
+        <span style="color: #008800; font-weight: bold">while</span>(a<span style="color: #333333">!=</span>b):
+            <span style="color: #008800; font-weight: bold">if</span> a<span style="color: #333333">></span>b:
+                a<span style="color: #333333">=</span>a<span style="color: #333333">-</span>b
+            <span style="color: #008800; font-weight: bold">else</span>:
+                b<span style="color: #333333">=</span>b<span style="color: #333333">-</span>a
+        <span style="color: #008800; font-weight: bold">return</span> a
+    </pre></td></tr></table></div>
+
+    <h2>Skrypt JS</h2>
+    <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">function</span> f1()
+        {
+            <span style="color: #008800; font-weight: bold">var</span> a <span style="color: #333333">=</span> <span style="color: #007020">document</span>.getElementById(<span style="background-color: #fff0f0">"a"</span>).value;
+            <span style="color: #008800; font-weight: bold">var</span> b <span style="color: #333333">=</span> <span style="color: #007020">document</span>.getElementById(<span style="background-color: #fff0f0">"b"</span>).value;
+            <span style="color: #008800; font-weight: bold">while</span> (a <span style="color: #333333">!=</span> b){
+                <span style="color: #008800; font-weight: bold">if</span> (a <span style="color: #333333">></span> b)
+                    a <span style="color: #333333">-=</span> b;
+                <span style="color: #008800; font-weight: bold">else</span>
+                    b <span style="color: #333333">-=</span> a;
+            }
+            
+            <span style="color: #007020">document</span>.getElementById(<span style="background-color: #fff0f0">"wynik"</span>).innerHTML <span style="color: #333333">=</span> a;
+            
+        }
+    </pre></div>
+	
+       
+<center>
+<h2>Skrypt JS</h2>
+<p>Skrypt JS podaje największy wspólny dzielnik liczb a i b</p><br>
+Podaj a 
+<input type = "number" id = "a" value = 1>
+Podaj b
+<input type = "number" id = "b" value = 100>
+<input type = "button" value = "Pokaż" onclick = "f1()";
+<br>
+<div id = "wynik">...</div>
+</center>
+<br>
+
+ 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+</body>
+</html>
